@@ -142,7 +142,7 @@ class App extends React.Component {
     },
     {
       title: 'STATUS',
-      isEditable: false,
+      isEditable: true,
       mappingId: 'status',
       type: FORM_TYPE.SELECT
     }

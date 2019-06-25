@@ -81,25 +81,32 @@ class CustomTable extends Component {
                                                 {
                                                     this.props.columnHeaders.map(col => (
                                                         <React.Fragment key={col.mappingId}>
-                                                            {
-                                                                col.type === FORM_TYPE.TEXT ?
-                                                                    <td className="form-group">
-                                                                        {/* <label for="exampleFormControlInput1">Email address</label> */}
-                                                                        <input type="text" className="form-control" value={item.value} onChange={(event) => this.valueChange(event, item, col)} placeholder="name" />
-                                                                    </td> :
-                                                                    <React.Fragment>
-                                                                        {
-                                                                            col.type === FORM_TYPE.SELECT ?
+                                                            <React.Fragment>
+                                                                {
+                                                                    col.isEditable ?
+                                                                        <React.Fragment>
+                                                                            {
+                                                                                col.type === FORM_TYPE.TEXT &&
+                                                                                <td className="form-group">
+                                                                                    {/* <label for="exampleFormControlInput1">Email address</label> */}
+                                                                                    <input type="text" className="form-control" value={item.value} onChange={(event) => this.valueChange(event, item, col)} placeholder="name" />
+                                                                                </td>
+                                                                            }
+                                                                            {
+                                                                                col.type === FORM_TYPE.SELECT &&
                                                                                 <td className="col">
-                                                                                    <select className="form-control" id={item.id} onBlur={(event) => this.valueChange(event, item, col)}>
+                                                                                    <select className="form-control" id={item.id} onChange={(event) => this.valueChange(event, item, col)}>
                                                                                         <option value='1'>Pending</option>
                                                                                         <option value='2'>complete</option>
                                                                                     </select>
-                                                                                </td> :
-                                                                                <div></div>
-                                                                        }
-                                                                    </React.Fragment>
-                                                            }
+                                                                                </td>
+                                                                            }
+                                                                        </React.Fragment> :
+                                                                        <React.Fragment>
+                                                                            <td>{item[col.mappingId]}</td>
+                                                                        </React.Fragment>
+                                                                }
+                                                            </React.Fragment>
                                                         </React.Fragment>
                                                     ))
                                                 }
@@ -130,4 +137,5 @@ class CustomTable extends Component {
     }
 }
 
-export default CustomTable
+export default CustomTable;
+
