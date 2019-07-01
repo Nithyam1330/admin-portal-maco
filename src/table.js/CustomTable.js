@@ -5,7 +5,7 @@ import { FORM_TYPE } from './FormType';
 class CustomTable extends Component {
     constructor(props) {
         super(props)
-        this.backup = this.props.data;
+        this.backup = this.deepCone(this.props.data);
         this.items = this.props.data;
         this.items.forEach(element => {
             element['isEditable'] = false
@@ -19,13 +19,14 @@ class CustomTable extends Component {
         };
         // bind function in constructor instead of render (https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md)
         this.onChangePage = this.onChangePage.bind(this);
+        this.editClick = this.editClick.bind(this)
     }
     editClick(item) {
         const index = this.items.findIndex(x => x.id === item.id);
         if (index !== -1) {
-            this.items[index].isEditable = true;
+            this.backup[index].isEditable = true;
             this.setState({
-                exampleItems: this.items
+                exampleItems: this.backup
             })
         }
     }
@@ -37,16 +38,24 @@ class CustomTable extends Component {
         return JSON.parse(JSON.stringify(input));
     }
     saveHandler(item) {
-        console.log(item);
+        this.setState({
+            exampleItems: this.backup
+        }, () => {
+            let index = this.backup.findIndex(obj => obj.id === item.id);
+            if (index !== -1) {
+                delete this.backup[index].isEditable;
+                console.log(this.backup[index]);
+                // save service call
+            }
+        })
     }
 
     cancelHandler(item) {
         const index = this.items.findIndex(x => x.id === item.id);
         if (index !== -1) {
-            // this.backup[index].isEditable = false;
-            this.items[index] = this.state.exampleItems[index];
+            this.backup[index].isEditable = false;
             this.setState({
-                exampleItems: this.items
+                exampleItems: this.backup
             })
         }
     }
@@ -54,10 +63,7 @@ class CustomTable extends Component {
     valueChange(event, item, col) {
         const index = this.items.findIndex(x => x.id === item.id);
         if (index !== -1) {
-            this.items[index][col.mappingId] = event.target.value;
-            this.setState({
-                exampleItems: this.items
-            })
+            this.backup[index][col.mappingId] = event.target.value;
         }
     }
     render() {
@@ -81,6 +87,8 @@ class CustomTable extends Component {
                                                 {
                                                     this.props.columnHeaders.map(col => (
                                                         <React.Fragment key={col.mappingId}>
+                                                                                                                            {col.isEditable}
+{col.isEditable}
                                                             <React.Fragment>
                                                                 {
                                                                     col.isEditable ?
@@ -95,9 +103,12 @@ class CustomTable extends Component {
                                                                             {
                                                                                 col.type === FORM_TYPE.SELECT &&
                                                                                 <td className="col">
-                                                                                    <select className="form-control" id={item.id} onChange={(event) => this.valueChange(event, item, col)}>
-                                                                                        <option value='1'>Pending</option>
-                                                                                        <option value='2'>complete</option>
+                                                                                    <select className="form-control" id={item.id} selected={item.status} onChange={(event) => this.valueChange(event, item, col)}>
+                                                                                        {
+                                                                                            col.options.map((optionValue) => (
+                                                                                                <option value={optionValue.key} key={optionValue.key}>{optionValue.value}</option>
+                                                                                            ))
+                                                                                        }
                                                                                     </select>
                                                                                 </td>
                                                                             }
