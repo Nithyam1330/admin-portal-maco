@@ -11,14 +11,14 @@ class UsersList extends Component {
             users: JSON.parse(JSON.stringify(this.props.users)),
             pageOfItems: []
         }
-        // this.onChangePage = this.onChangePage.bind(this);
+        this.onChangePage = this.onChangePage.bind(this);
 
     }
 
     onChangePage = (pageOfItems) => {
         // update state with new page of items
         this.setState({
-            pageOfItems: pageOfItems
+            users: pageOfItems
         });
     }
 
@@ -51,7 +51,7 @@ class UsersList extends Component {
                     </thead>
                     <tbody>
                         {
-                            this.state.users.map((res) => (
+                            this.state.users && this.state.users.map((res) => (
                                 <React.Fragment key={res.id}>
                                     <tr>
                                         <th>{res.id}</th>
@@ -70,7 +70,7 @@ class UsersList extends Component {
                         }
                     </tbody>
                 </table>
-                <Pagination items={this.props.users} onChangePage={() => this.onChangePage()} />
+                <Pagination items={this.props.users} onChangePage={this.onChangePage} />
 
             </div>
         )
