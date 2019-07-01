@@ -1,9 +1,6 @@
 import React from 'react';
 import './App.css';
-import CustomTable from './table.js/CustomTable';
-import { FORM_TYPE } from './table.js/FormType';
-import UsersList from './users-list/UsersList';
-
+import UsersList from './postlogin/users-list/UsersList';
 class App extends React.Component {
   users = [
     {
@@ -127,48 +124,12 @@ class App extends React.Component {
       status: 'COMPLETED'
     }
   ];
-
-  headers = [
-    {
-      title: 'ID',
-      mappingId: 'id',
-      isEditable: false,
-      type: FORM_TYPE.TEXT
-    },
-    {
-      title: 'NAME',
-      mappingId: 'value',
-      isEditable: false,
-      type: FORM_TYPE.TEXT
-    },
-    {
-      title: 'STATUS',
-      isEditable: true,
-      mappingId: 'status',
-      type: FORM_TYPE.SELECT,
-      options: [
-        {
-          value: 'PENDING',
-          key: 'PENDING'
-        },
-        {
-          value: 'COMPLETED',
-          key: 'COMPLETED'
-        },
-        {
-          value: 'NONE',
-          key: 'NONE'
-        }
-      ]
-    }
-  ]
   render() {
     return (
       <div>
         <div className="container">
           <div className="text-center">
             <h1>Users list</h1>
-            {/* <CustomTable data={this.users} columnHeaders={this.headers}></CustomTable> */}
             <UsersList users={this.users}></UsersList>
           </div>
         </div>
