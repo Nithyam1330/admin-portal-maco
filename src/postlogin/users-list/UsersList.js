@@ -11,6 +11,7 @@ class UsersList extends Component {
             pageOfItems: [],
             editableFields: false
         }
+        this.paginationRef = React.createRef();
         this.onChangePage = this.onChangePage.bind(this);
     }
 
@@ -29,6 +30,11 @@ class UsersList extends Component {
             const searchedArray = searchFilterArrayOfJson(this.props.users, this.state.search, headers);
             this.setState({
                 users: searchedArray
+            }, () => {
+                console.log(this.paginationRef);
+                if (this.paginationRef && this.paginationRef.current) {
+                    this.paginationRef.current.setPage(1);
+                }
             })
         })
     }
@@ -143,7 +149,7 @@ class UsersList extends Component {
                     </tbody>
                 </table>
                 {
-                    this.state.users.length >= 10 && <Pagination items={this.props.users} onChangePage={this.onChangePage} />
+                    this.state.users.length >= 10 && <Pagination ref={this.paginationRef} items={this.props.users} onChangePage={this.onChangePage} />
 
                 }
                 <div className="d-flex justify-content-end">
