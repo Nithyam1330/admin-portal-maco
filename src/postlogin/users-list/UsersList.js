@@ -35,7 +35,7 @@ class UsersList extends Component {
     statusChange(ev, item) {
         const index = this.state.users.findIndex(obj => obj.id === item.id);
         if (index !== -1) {
-            this.state.users[index].status = ev.target.value;
+            this.state.users[index].isBlocked = ev.target.value;
             this.forceUpdate();
         }
     }
@@ -140,6 +140,7 @@ class UsersList extends Component {
                                 </React.Fragment>
                             ))
                         }
+
                     </tbody>
                 </table>
                 {
