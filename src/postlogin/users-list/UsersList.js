@@ -33,7 +33,7 @@ class UsersList extends Component {
         })
     }
     statusChange(ev, item) {
-        const index = this.state.users.findIndex(obj => obj.id === item.id);
+        const index = this.state.users.findIndex(obj => obj.userid === item.userid);
         if (index !== -1) {
             this.state.users[index].isBlocked = ev.target.value;
             this.forceUpdate();
@@ -41,7 +41,6 @@ class UsersList extends Component {
     }
 
     saveChanges() {
-        console.log(this.state.users);
         this.setState({
             editableFields: false
         })
