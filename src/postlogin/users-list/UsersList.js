@@ -142,7 +142,10 @@ class UsersList extends Component {
                         }
                     </tbody>
                 </table>
-                <Pagination items={this.props.users} onChangePage={this.onChangePage} />
+                {
+                    this.state.users.length >= 10 && <Pagination items={this.props.users} onChangePage={this.onChangePage} />
+
+                }
                 <div className="d-flex justify-content-end">
                     <button className="btn btn-danger" onClick={() => this.revertChanges()}>Cancel</button> &nbsp;
                     <button className="btn btn-primary" onClick={() => this.saveChanges()}>Save</button>
