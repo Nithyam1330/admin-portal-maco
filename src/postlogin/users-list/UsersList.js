@@ -61,7 +61,7 @@ class UsersList extends Component {
             <div>
                 <div className="d-flex justify-content-between">
                     <div className="input-group mb-3">
-                        <input type="text" value={this.state.search} placeholder="Search by ..." className="form-control" onChange={(event) => this.search(event)} />
+                        <input type="text" value={this.state.search} placeholder="Search by ..." className="form-control" onChange={(event) => this.search(event, 'name')} />
                     </div>
                     <div>
                         <button className="btn btn-primary" onClick={() => this.changeIsEditable()}>Edit</button>
