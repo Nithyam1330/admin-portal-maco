@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import UsersList from './postlogin/users-list/UsersList';
+import Header from './postlogin/header';
+import SideNav from './postlogin/sidenav';
 
 class App extends React.Component {
 
@@ -520,14 +522,18 @@ class App extends React.Component {
   ];
   render() {
     return (
-      <div>
-        <div className="container">
-          <div className="text-center">
-            <h1>Users list</h1>
-            <UsersList users={this.obj}></UsersList>
+        <div className="custom-page">
+           <SideNav></SideNav>
+           <div className="custom-content">
+           <Header></Header> 
+           <div className="Main-page">
+           <UsersList users={this.obj}></UsersList>
+           </div>
+          
+           </div>
           </div>
-        </div>
-      </div>
+      
+      
     );
   }
 }

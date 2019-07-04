@@ -63,19 +63,20 @@ class UsersList extends Component {
     }
     render() {
         return (
-            <div>
-                <div className="d-flex justify-content-between">
-                    <div className="input-group mb-3">
+            <div className="Main-content">
+                <div className="d-flex justify-content-between serch-edit">
+                    <div className="custom-input">
                         <input type="text" value={this.state.search} placeholder="Search by ..." className="form-control" onChange={(event) => this.search(event, 'name')} />
                     </div>
                     <div>
-                        <button className="btn btn-primary" onClick={() => this.changeIsEditable()}>Edit</button>
-                    </div>
+                    <span class="icon-edit-icon" onClick={() => this.changeIsEditable()}></span>
+                        {/* <button className="btn btn-primary" onClick={() => this.changeIsEditable()}>Edit</button> */}
+                </div>
                 </div>
 
-                <table className="table table-striped">
+                <table className="table table-striped custom-table">
                     <thead>
-                        <tr>
+                        <tr className="table-header">
                             <th scope="col">
                                 <span>Name</span>
                                 <br></br>

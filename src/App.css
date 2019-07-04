@@ -22,7 +22,21 @@
 .App-link {
   color: #61dafb;
 }
-
+.custom-page{
+  display: flex;
+}
+.custom-content{
+  width:100%;
+}
+.Main-page{
+  margin-top: 80px;
+  margin-left: 95px;
+}
+input:focus,input:hover,button:focus,button:hover{
+  border:none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

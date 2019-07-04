@@ -1,7 +1,51 @@
+.Main-content{
+   margin:5%;
+}
+table{
+    border-collapse:separate; 
+    border-spacing:0 15px; 
+    table-layout: fixed;
+}
 th input{
     width: 120px;
 } 
 
 th {
     width: 120px;
+    border:0 !important;
+    vertical-align: middle !important;
+}
+.table-header{
+    border: 1px solid #dadada !important;
+    box-shadow:none !important;
+}
+tr{
+    background-color: white !important;
+    box-shadow: 0 1px 6px 0 rgba(179, 179, 179, 0.5);
+}
+.custom-input{
+    border:1px solid #dadada;
+    border-radius: 5px;
+    box-shadow: 0 1px 6px 0 rgba(179, 179, 179, 0.5);
+    display: flex;
+    align-items: center;
+}
+.custom-input::before{
+    content: "\e91b";
+    color: #9b9b9b;
+    font-family: 'Maco';
+    font-size: 18px;
+    margin: 0px 10px;
+}
+.custom-input input{
+    border:none !important;
+}
+.serch-edit{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.serch-edit span::before{
+    color: gray;
+    font-size: 25px;
 }
