@@ -22,20 +22,51 @@
 .App-link {
   color: #61dafb;
 }
-.custom-page{
-  display: flex;
-}
+
 .custom-content{
   width:100%;
 }
+.custom-page{
+  height:100vh;
+  overflow: hidden;
+}
 .Main-page{
   margin-top: 80px;
-  margin-left: 95px;
+  margin-left: 80px;
+  overflow-y: auto;
+  height: calc(100% - 80px);
 }
 input:focus,input:hover,button:focus,button:hover{
   border:none !important;
   box-shadow: none !important;
   outline: none !important;
+}
+::-webkit-input-placeholder { /* Edge */
+  color: #9b9b9b;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #9b9b9b;
+}
+
+::placeholder {
+  color: #9b9b9b;
+}
+.pagination-controls{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+}
+.buttonstyles{
+  color:white;
+  background-color: #ff6000;
+  border-radius: 18px;
+  border:none;
+  padding:10px 30px;
+  font-size: 14px;
+  cursor: pointer;
 }
 @keyframes App-logo-spin {
   from {

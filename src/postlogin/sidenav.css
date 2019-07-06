@@ -11,10 +11,12 @@
 .side-nav span{
     padding:20px;
     width:100%;
+    cursor: pointer;
 }
 .side-nav span:hover{
     background-color:rgb(218,218,218);
     width:100%;
+    cursor: pointer;
 }
 .side-nav span::before{
     font-size: 30px;

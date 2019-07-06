@@ -54,15 +54,7 @@ label{
     margin-top: 30px;
     justify-content: center;
 }
-.buttonstyles{
-    color:white;
-    background-color: rgb(255,96,0);
-    border-radius: 18px;
-    border:none;
-    padding:10px 30px;
-    font-size: 14px;
-    cursor: pointer;
-}
+
 .forgot-password{
     text-align: end;
     font-size: 16px;
@@ -76,4 +68,11 @@ label{
 
 }
   
- 
+@media screen  and (max-width:1440px){
+    .Login-text{
+        margin:0px;
+    } 
+    label{
+        margin:5px 0px;
+    }
+}

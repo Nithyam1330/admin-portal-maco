@@ -63,59 +63,55 @@ class UsersList extends Component {
     }
     render() {
         return (
-            <div className="Main-content">
-                <div className="d-flex justify-content-between serch-edit">
+           
+               <div className="Main-content">
+               <div className="d-flex justify-content-between serch-edit">
                     <div className="custom-input">
                         <input type="text" value={this.state.search} placeholder="Search by ..." className="form-control" onChange={(event) => this.search(event, 'name')} />
                     </div>
                     <div>
                     <span class="icon-edit-icon" onClick={() => this.changeIsEditable()}></span>
-                        {/* <button className="btn btn-primary" onClick={() => this.changeIsEditable()}>Edit</button> */}
                 </div>
                 </div>
 
                 <table className="table table-striped custom-table">
                     <thead>
                         <tr className="table-header">
-                            <th scope="col">
-                                <span>Name</span>
-                                <br></br>
-                                <input type="text" placeholder="Search by Name" onKeyUp={(event) => this.search(event, 'name')}></input>
+                            <th className="search-data">
+                                <input type="text" placeholder="Name" onKeyUp={(event) => this.search(event, 'name')}></input>
                             </th>
 
-                            <th scope="col">
-                                <span>Email</span>
-                                <br></br>
-                                <input type="text" placeholder="Search by Email" onKeyUp={(event) => this.search(event, 'email')}></input>
+                            <th className="search-data">
+                             
+                                <input type="text" placeholder="Email" onKeyUp={(event) => this.search(event, 'email')}></input>
                             </th>
 
-                            <th scope="col">
-                                <span>Phone Number</span>
-                                <br></br>
-                                <input type="text" placeholder="Search by Phone " onKeyUp={(event) => this.search(event, 'phoneNumber')}></input>
+                            <th className="search-data">
+                               
+                                <input type="text" placeholder="Phone " onKeyUp={(event) => this.search(event, 'phoneNumber')}></input>
                             </th>
 
-                            <th scope="col">
+                            <th>
                                 <span>User Id</span>
-                                <br></br>
+                               
                             </th>
-                            <th scope="col">
+                            <th>
                                 <span>Work Out With Me Price</span>
-                                <br></br>
+                                
                             </th>
 
-                            <th scope="col">
+                            <th>
                                 <span>Personal Training Price</span>
-                                <br></br>
+                               
                             </th>
 
-                            <th scope="col">
+                            <th>
                                 <span>Trainer Activation</span>
-                                <br></br>
+                                
                             </th>
-                            <th scope="col">
+                            <th>
                                 <span>Block Status</span>
-                                <br></br>
+                               
                             </th>
                         </tr>
                     </thead>
@@ -123,25 +119,25 @@ class UsersList extends Component {
                         {
                             this.state.users && this.state.users.map((res) => (
                                 <React.Fragment key={res.userid}>
-                                    <tr>
-                                        <th>{res.name}</th>
-                                        <th>{res.email}</th>
-                                        <th>{res.phoneNumber}</th>
-                                        <th>{res.userid}</th>
-                                        <th>{res.workOutWithMePrice}</th>
-                                        <th>{res.personalTrainingPrice}</th>
-                                        <th>
+                                    <tr className="table-data">
+                                        <td>{res.name}</td>
+                                        <td>{res.email}</td>
+                                        <td>{res.phoneNumber}</td>
+                                        <td>{res.userid}</td>
+                                        <td>{res.workOutWithMePrice}</td>
+                                        <td>{res.personalTrainingPrice}</td>
+                                        <td>
                                             {res.trainer_activation ? 'Active' : 'Inactive'}
-                                        </th>
+                                        </td>
 
-                                        <th>
-                                            <div className="form-group">
+                                        <td>
+                                            <div>
                                                 <select className="form-control" value={res.isBlocked} onChange={(event) => this.statusChange(event, res)} disabled={!this.state.editableFields}>
                                                     <option value='BLOCKED'>BLOCKED</option>
                                                     <option value="ACTIVE">ACTIVE</option>
                                                 </select>
                                             </div>
-                                        </th>
+                                        </td>
                                     </tr>
                                 </React.Fragment>
                             ))
@@ -149,16 +145,17 @@ class UsersList extends Component {
 
                     </tbody>
                 </table>
+                <div className="pagination-controls">
                 {
                     this.state.users.length >= 10 && <Pagination ref={this.paginationRef} items={this.props.users} onChangePage={this.onChangePage} />
 
                 }
-                <div className="d-flex justify-content-end">
-                    <button className="btn btn-danger" onClick={() => this.revertChanges()}>Cancel</button> &nbsp;
-                    <button className="btn btn-primary" onClick={() => this.saveChanges()}>Save</button>
-
+                <div className="d-flex justify-content-end save-cancelbtn">
+                    <span className="icon-cross cross-icon"onClick={() => this.revertChanges()}></span> &nbsp;
+                    <span className="icon-tick" onClick={() => this.saveChanges()}></span>
                 </div>
-            </div>
+                </div>
+               </div>
         )
     }
 }
