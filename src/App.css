@@ -38,7 +38,6 @@
 }
 input:focus,input:hover,button:focus,button:hover{
   border:none !important;
-  box-shadow: none !important;
   outline: none !important;
 }
 ::-webkit-input-placeholder { /* Edge */

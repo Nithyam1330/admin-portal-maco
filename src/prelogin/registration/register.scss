@@ -1,0 +1,41 @@
+.Register-page{
+    background-color: rgb(250,250,250);
+    overflow: hidden;
+    height: -webkit-fill-available;
+    font-family: 'OpenSans-Regular';
+.main{
+    margin: 5% auto;
+    overflow: hidden;
+    width: 80%;
+    box-shadow: 0 1px 6px 0 rgba(179, 179, 179, 0.5);
+    padding:40px;
+    background-color: white;
+    .icon-maco{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    }
+    .signup-text{
+        h1{
+            font-size: 16px;
+            font-weight: 600;
+        }
+        p{
+            font-size: 12px;
+        }
+    }
+    .input-fields{
+        display: flex;
+        flex-direction: column;
+        input{
+            border:none;
+            box-shadow: 0 1px 6px 0 rgba(179, 179, 179, 0.5);
+            padding:10px;
+            margin:10px 0px;
+        }
+    }
+   
+   
+}
+}

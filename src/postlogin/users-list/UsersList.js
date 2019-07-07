@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { searchFilterArrayOfJson } from '../../shared/services/custom-search/CustomSearch';
 import Pagination from '../../shared/components/pagination/Pagination';
-import './UsersList.css';
+import './UsersList.scss';
 class UsersList extends Component {
     constructor(props) {
         super(props);
