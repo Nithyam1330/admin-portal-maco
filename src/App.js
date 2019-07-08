@@ -526,12 +526,12 @@ class App extends React.Component {
     return (
         <div className="custom-page">
           {/* <Login></Login> */}
-          <Register></Register>
-           {/* <SideNav></SideNav>
+          {/* <Register></Register> */}
+           <SideNav></SideNav>
            <Header></Header>
            <div className="Main-page">
            <UsersList users={this.obj}></UsersList>
-           </div> */}
+           </div>
         </div>
       
       
