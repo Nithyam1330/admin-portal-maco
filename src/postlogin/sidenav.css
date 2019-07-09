@@ -1,0 +1,44 @@
+.side-nav{
+    display: flex;
+    flex-direction: column;
+    width: 80px;
+    align-items: center;
+    box-shadow: 0 1px 6px 0 rgba(179, 179, 179, 0.5);
+    position: fixed;
+    height: 100%;
+    z-index: 100;
+}
+.side-nav span{
+    padding:20px;
+    width:100%;
+    cursor: pointer;
+}
+.side-nav span:hover{
+    background-color:rgb(218,218,218);
+    width:100%;
+    cursor: pointer;
+}
+.side-nav span::before{
+    font-size: 30px;
+    color:gray;
+}
+.maco-logo{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    width: 100%;
+    padding: 0px !important;
+    justify-content: center;
+    flex-direction: column;
+}
+.maco-logo img{
+    height: 35px;
+}
+.maco-logo span{
+    padding:0px !important
+}
+.maco-logo span::before{
+    color: #ff6d00 !important;
+    font-size: 8px !important; 
+}

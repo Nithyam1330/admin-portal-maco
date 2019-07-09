@@ -11,3 +11,398 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: url('./assets/fonts/OpenSans-Regular.eot') format('embedded-opentype'), url('./assets/fonts/OpenSans-Regular.woff') format('woff'), url('./assets/fonts/OpenSans-Regular.ttf') format('truetype'), url('./assets/fonts/OpenSans-Regular.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OpenSans-Bold';
+  src: url('./assets/fonts/OpenSans-Bold.eot') format('embedded-opentype'), url('./assets/fonts/OpenSans-Bold.woff') format('woff'), url('./assets/fonts/OpenSans-Bold.ttf') format('truetype'), url('./assets/fonts/OpenSans-Bold.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans-Italic';
+  src: url('./assets/fonts/OpenSans-Italic.eot') format('embedded-opentype'), url('./assets/fonts/OpenSans-Italic.woff') format('woff'), url('./assets/fonts/OpenSans-Italic.ttf') format('truetype'), url('./assets/fonts/OpenSans-Italic.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Maco';
+  src:
+    url('./assets/fonts/Maco.ttf') format('truetype'),
+    url('./assets/fonts/Maco.woff') format('woff'),
+    url('./assets/fonts/Maco.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'Maco' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-myorders:before {
+  content: "\e94c";
+  color: #666;
+}
+.icon-bell:before {
+  content: "\e947";
+}
+.icon-mypartners_orange:before {
+  content: "\e948";
+  color: #ff6000;
+}
+.icon-mypartners:before {
+  content: "\e949";
+  color: #9b9b9b;
+}
+.icon-maco:before {
+  content: "\e946";
+  color: #ff6d00;
+}
+.icon-mail:before {
+  content: "\e944";
+  color: #ff6000;
+}
+.icon-website:before {
+  content: "\e945";
+  color: #ff6000;
+}
+.icon-filled-cross:before {
+  content: "\e943";
+  color: #a7a7a7;
+}
+.icon-user-ok:before {
+  content: "\e93e";
+  color: #fff;
+}
+.icon-user-navigate:before {
+  content: "\e940";
+  color: #fff;
+}
+.icon-timer-icon:before {
+  content: "\e941";
+  color: #fff;
+}
+.icon-smiley-icon:before {
+  content: "\e942";
+  color: #fff;
+}
+.icon-new-request:before {
+  content: "\e916";
+  color: #fff;
+}
+.icon-location:before {
+  content: "\e917";
+  color: #fff;
+}
+.icon-send-icon:before {
+  content: "\e918";
+  color: #fff;
+}
+.icon-search-icon:before {
+  content: "\e91b";
+  color: #9b9b9b;
+}
+.icon-calendar:before {
+  content: "\e91c";
+  color: #fff;
+}
+.icon-chat-icon-orange:before {
+  content: "\e91d";
+  color: #ff6000;
+}
+.icon-chat-icon:before {
+  content: "\e921";
+  color: #fff;
+}
+.icon-error:before {
+  content: "\e905";
+  color: #d75a4a;
+}
+.icon-edit-icon:before {
+  content: "\e906";
+  color: #fff;
+}
+.icon-add_request:before {
+  content: "\e907";
+}
+.icon-fun-icon:before {
+  content: "\e908";
+}
+.icon-progress_report:before {
+  content: "\e90c";
+  color: #fff;
+}
+.icon-shape_red:before {
+  content: "\e90d";
+  color: #d0021b;
+}
+.icon-squats:before {
+  content: "\e90e";
+  color: #fff;
+}
+.icon-yoga:before {
+  content: "\e90f";
+  color: #898897;
+}
+.icon-bootcamp:before {
+  content: "\e911";
+  color: #898897;
+}
+.icon-crossfit:before {
+  content: "\e912";
+  color: #898897;
+}
+.icon-gym:before {
+  content: "\e913";
+  color: #fff;
+}
+.icon-fitness:before {
+  content: "\e914";
+  color: #898897;
+}
+.icon-revert-icon:before {
+  content: "\e904";
+  color: #fff;
+}
+.icon-flash-icon:before {
+  content: "\e902";
+  color: #fff;
+}
+.icon-camera-icon:before {
+  content: "\e903";
+  color: #ff6000;
+}
+.icon-flag_bg:before {
+  content: "\e91a";
+  color: #ff6000;
+}
+.icon-add .path1:before {
+  content: "\e976";
+  color: rgb(0, 0, 0);
+}
+.icon-add .path2:before {
+  content: "\e977";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-burn:before {
+  content: "\e978";
+  color: #9b9b9b;
+}
+.icon-more:before {
+  content: "\e979";
+  color: #4a4a4a;
+}
+.icon-comment:before {
+  content: "\e97a";
+  color: #9b9b9b;
+}
+.icon-flag:before {
+  content: "\e97b";
+  color: #fff;
+}
+.icon-like:before {
+  content: "\e97c";
+  color: #ff6000;
+}
+.icon-overdue:before {
+  content: "\e966";
+  color: #f12419;
+}
+.icon-agenda-white:before {
+  content: "\e94f";
+  color: #fff;
+}
+.icon-plus_n:before {
+  content: "\e953";
+  color: #5225b5;
+}
+.icon-attach_n:before {
+  content: "\e957";
+  color: #757575;
+}
+.icon-notification-n:before {
+  content: "\e94a";
+  color: #757575;
+}
+.icon-profile-n:before {
+  content: "\e94b";
+  color: #bcbcbc;
+}
+.icon-search-n:before {
+  content: "\e94d";
+  color: #757575;
+}
+.icon-check-mark:before {
+  content: "\e93f";
+}
+.icon-checkafter:before {
+  content: "\e909";
+  color: #5225b5;
+}
+.icon-checkbefore:before {
+  content: "\e90a";
+  color: #5225b5;
+}
+.icon-circle:before {
+  content: "\e90b";
+  color: #ba5613;
+}
+.icon-cross:before {
+  content: "\e910";
+  color: #fff;
+}
+.icon-down:before {
+  content: "\e915";
+  color: #5225b5;
+}
+.icon-filter:before {
+  content: "\e919";
+  color: #5225b5;
+}
+.icon-mobilemenu:before {
+  content: "\e922";
+  color: #fff;
+}
+.icon-notification:before {
+  content: "\e923";
+  color: #5225b5;
+}
+.icon-plus:before {
+  content: "\e924";
+  color: #fff;
+}
+.icon-right:before {
+  content: "\e92a";
+  color: #fafafa;
+}
+.icon-starafter:before {
+  content: "\e92d";
+  color: #ba5613;
+}
+.icon-starbefore:before {
+  content: "\e92e";
+  color: #ba5613;
+}
+.icon-tickcircle .path1:before {
+  content: "\e932";
+  color: rgb(0, 0, 0);
+}
+.icon-tickcircle .path2:before {
+  content: "\e933";
+  margin-left: -1.0185546875em;
+  color: rgb(23, 161, 95);
+}
+.icon-tickcircle .path3:before {
+  content: "\e934";
+  margin-left: -1.0185546875em;
+  color: rgb(255, 255, 255);
+}
+.icon-up:before {
+  content: "\e935";
+  color: #5225b5;
+}
+.icon-shape:before {
+  content: "\e900";
+  color: #fff;
+}
+.icon-left-arrow:before {
+  content: "\e901";
+}
+.icon-back:before {
+  content: "\e91e";
+  color: #fff;
+}
+.icon-add_time:before {
+  content: "\e91f";
+  color: #ff6000;
+}
+.icon-tick:before {
+  content: "\e920";
+}
+.icon-about:before {
+  content: "\e925";
+}
+.icon-contact:before {
+  content: "\e926";
+}
+.icon-hand:before {
+  content: "\e927";
+  color: #fff;
+}
+.icon-explore:before {
+  content: "\e928";
+  color: #ff6000;
+}
+.icon-home:before {
+  content: "\e929";
+  color: #9b9b9b;
+}
+.icon-invite:before {
+  content: "\e92b";
+}
+.icon-logout:before {
+  content: "\e92c";
+}
+.icon-menu_copy .path1:before {
+  content: "\e92f";
+  color: rgb(14, 15, 19);
+}
+.icon-menu_copy .path2:before {
+  content: "\e930";
+  margin-left: -1em;
+  color: rgb(208, 2, 27);
+}
+.icon-menu:before {
+  content: "\e931";
+}
+.icon-privacy:before {
+  content: "\e936";
+}
+.icon-settings:before {
+  content: "\e937";
+  color: #ff6000;
+}
+.icon-share:before {
+  content: "\e938";
+}
+.icon-trainer:before {
+  content: "\e939";
+  color: #9b9b9b;
+}
+.icon-weightlifting:before {
+  content: "\e93a";
+  color: #fff;
+}
+.icon-event_calender:before {
+  content: "\e93b";
+  color: #ff6000;
+}
+.icon-filter1:before {
+  content: "\e93c";
+  color: #fff;
+}
+.icon-workout:before {
+  content: "\e93d";
+  color: #ff6000;
+}
+.icon-play:before {
+  content: "\e95f";
+  color: #fff;
+}

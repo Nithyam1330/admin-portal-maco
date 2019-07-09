@@ -1,0 +1,83 @@
+.login-page{
+    background-color: rgb(250,250,250);
+    overflow: hidden;
+    height: -webkit-fill-available;
+    font-family: 'OpenSans-Regular';
+    .main{
+        margin: 3% auto;
+        display: flex;
+        overflow: hidden;
+        width: 60%;
+        box-shadow: 0 1px 6px 0 rgba(179, 179, 179, 0.5);
+        .custom-logo{
+            width: 50%;
+            background-image: url('../../assets/images/defaultprofile2x.png');
+            background-size: cover;
+            height: -webkit-fill-available;
+            background-position: bottom;
+            img{
+                height: -webkit-fill-available;
+                width: -webkit-fill-available;
+            }
+            
+          }
+          .custom-inputfields{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            background-image: url('../../assets/images/pattern-copy-2-copy.jpg');
+            flex-direction: column;
+            .inputs-content{
+                width: 70%;
+                margin: auto;
+                .input-username{
+                    border: 1px solid #979797;
+                    border-radius: 5px;
+                    padding: 8px;
+                    margin: 10px 0px;
+                }
+                input{
+                    border:none;
+                    width: 100%;
+                }
+                
+                label{
+                    color: #363636;
+                    margin:10px 0px;
+                }
+                
+                .custom-button{
+                    display: flex;
+                    margin-top: 30px;
+                    justify-content: center;
+                }
+                
+                .forgot-password{
+                    text-align: end;
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+                .Login-text{
+                    text-align: left;
+                    color: black;
+                    margin: 20px 0px;
+                    font-size: 18px;
+                
+                }
+            }
+        }
+      }
+}
+
+ 
+
+
+  
+@media screen  and (max-width:1440px){
+    .Login-text{
+        margin:0px;
+    } 
+    label{
+        margin:5px 0px;
+    }
+}

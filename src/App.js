@@ -1,6 +1,11 @@
 import React from 'react';
 import './App.css';
 import UsersList from './postlogin/users-list/UsersList';
+import Header from './postlogin/header';
+import SideNav from './postlogin/sidenav';
+import Login from  './prelogin/login/Login';
+import Register from './prelogin/registration/register';
+
 class App extends React.Component {
 
   obj = [
@@ -519,14 +524,17 @@ class App extends React.Component {
   ];
   render() {
     return (
-      <div>
-        <div className="container">
-          <div className="text-center">
-            <h1>Users list</h1>
-            <UsersList users={this.obj}></UsersList>
-          </div>
+        <div className="custom-page">
+          {/* <Login></Login> */}
+          {/* <Register></Register> */}
+           <SideNav></SideNav>
+           <Header></Header>
+           <div className="Main-page">
+           <UsersList users={this.obj}></UsersList>
+           </div>
         </div>
-      </div>
+      
+      
     );
   }
 }

@@ -1,0 +1,26 @@
+.header{
+    padding: 15px 30px;
+    border-bottom: 2px solid #ff6000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    background-color: white;
+}
+.header h1{
+    color: #ff6000;
+    font-family: 'OpenSans-Regular';
+    font-size: 26px;
+    font-weight: 600;
+    margin: 0;
+}
+.header span{
+    font-size: 25px;
+    cursor: pointer;
+    color: gray;
+}
+.profile-details{
+    background-image: url('../assets/images/backgroudBg.png')
+}
