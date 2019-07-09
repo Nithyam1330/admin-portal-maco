@@ -1,11 +1,13 @@
 import React, { Component } from "react";
-import { searchFilterArrayOfJson } from "../../shared/services/custom-search/CustomSearch";
-import Pagination from "../../shared/components/pagination/Pagination";
 import "./Login.scss";
 class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {};
+  }
+
+  navigateToDashboard() {
+    this.props.history.push('/dashboard');
   }
   render() {
     return (
@@ -23,9 +25,9 @@ class Login extends Component {
               <div class="input-username">
                 <input type="password" />
               </div>
-              <p class="forgot-password">Forgot Password?</p>
+              <p class="forgot-password" onClick={() => this.props.history.push('/forgot-password')}>Forgot Password?</p>
               <div class="custom-button">
-                <button class="buttonstyles">Login</button>
+                <button class="buttonstyles" onClick={() => this.navigateToDashboard()}>Login</button>
               </div>
             </div>
           </div>

@@ -3,16 +3,23 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Login from './prelogin/login/Login';
 import Register from './prelogin/registration/register';
-import UsersList from './postlogin/users-list/UsersList';
+import ForgotPassword from './prelogin/forgot-password/ForgotPassword';
+import PageNotFound from './prelogin/page-not-found/PageNotFound';
 const routing = (
     <Router>
-        <Route exact path="/" component={Login}></Route>
-        <Route exact path="/login" component={Login}></Route>
-        <Route exact path="/register" component={Register}></Route>
-        <Route exact path="/dashboard" component={App}></Route>
+        <div>
+            <Switch>
+                {/* <Route></Route> */}
+                <Route path="/login" component={Login}></Route>
+                <Route path="/register" component={Register}></Route>
+                <Route path="/forgot-password" component={ForgotPassword}></Route>
+                <Route path="/dashboard" component={App}></Route>
+                <Route component={PageNotFound}></Route>
+            </Switch>
+        </div>
     </Router>
 )
 ReactDOM.render(routing, document.getElementById('root'));
