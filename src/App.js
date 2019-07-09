@@ -3,7 +3,7 @@ import './App.css';
 import UsersList from './postlogin/users-list/UsersList';
 import Header from './postlogin/header';
 import SideNav from './postlogin/sidenav';
-import Login from  './prelogin/login/Login';
+import Login from './prelogin/login/Login';
 import Register from './prelogin/registration/register';
 
 class App extends React.Component {
@@ -524,17 +524,15 @@ class App extends React.Component {
   ];
   render() {
     return (
-        <div className="custom-page">
-          {/* <Login></Login> */}
-          {/* <Register></Register> */}
-           <SideNav></SideNav>
-           <Header></Header>
-           <div className="Main-page">
-           <UsersList users={this.obj}></UsersList>
-           </div>
+      <div className="custom-page">
+        <SideNav></SideNav>
+        <Header></Header>
+        <div className="Main-page">
+          <UsersList users={this.obj}></UsersList>
         </div>
-      
-      
+      </div>
+
+
     );
   }
 }
